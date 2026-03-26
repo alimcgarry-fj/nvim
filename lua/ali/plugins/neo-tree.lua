@@ -9,12 +9,37 @@ return {
   lazy = false,
   keys = {
     { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    {
+      '<leader>gt',
+      ':Neotree source=git_status<CR>',
+      desc = 'git current tree',
+    },
   },
   ---@module 'neo-tree'
   ---@type neotree.Config
   opts = {
+    default_component_configs = {
+      git_status = {
+        symbols = {
+          added = '',
+          deleted = '',
+          modified = '',
+          renamed = '',
+          untracked = '󱐋',
+          ignored = '',
+          unstaged = '',
+          staged = '',
+          conflict = '',
+        },
+      },
+    },
     filesystem = {
+      follow_current_file = {
+        enabled = true,
+        leave_dirs_open = false,
+      },
       window = {
+        position = 'left',
         mappings = {
           ['\\'] = 'close_window',
         },

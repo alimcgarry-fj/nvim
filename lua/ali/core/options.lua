@@ -16,6 +16,7 @@ opt.breakindent = true
 
 opt.undofile = true
 
+-- search settings
 opt.ignorecase = true
 opt.smartcase = true
 
@@ -38,6 +39,15 @@ opt.cursorline = true
 opt.scrolloff = 10
 
 opt.confirm = true
+
+opt.relativenumber = true
+opt.number = true
+
+-- tabs and indentation
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.autoindent = true
 
 -- diagnostic settings
 vim.diagnostic.config {
