@@ -11,16 +11,26 @@ return {
           indent = 2,
         },
         { section = 'keys', gap = 1, padding = 1 },
-        { section = 'startup' },
       },
       -- Customizing the buttons and behavior
       preset = {
         header = [[
- ／l、
-（ﾟ､ ｡ ７
-  l  ~ヽ
-      じしf_,)ノ
-          ]],
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣠⣤⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⣴⠞⠛⠉⠉⠉⠉⠹⠏⠉⠉⠉⠉⠛⠳⣤⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⣾⣷⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣾⣷⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢸⣿⠀⢀⣴⣶⣶⣦⣄⣀⣀⣠⣴⣶⣶⣦⡀⠀⣿⡇⠀⠀⠀⠀⠀
+⠀⠀⠀⢠⣄⡀⠋⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡄⠙⢀⣠⡄⠀⠀⠀
+⠀⠀⠀⠈⣿⣿⠀⣾⡿⠋⠈⠻⣿⣿⣿⣿⣿⣿⠟⠁⠙⢿⣷⠀⣿⣿⠁⠀⠀⠀
+⠀⠀⠀⠀⢿⣿⠀⣿⣦⡴⠛⠀⠈⠻⣿⣿⠟⠁⠀⠛⢦⣴⣿⠀⣿⡿⠀⠀⠀⠀
+⠀⠀⠀⠀⠈⠻⠀⣿⣏⣀⣸⣿⣀⣀⣾⣷⣀⣀⣿⣇⣀⣹⣿⠀⠟⠁⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⢀⠙⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠋⡀⠀⠀⠀⠀⠀⠀
+⠀⠀⢀⣠⣴⣾⣿⣷⣄⠙⣿⣿⣿⣄⡉⢉⣠⣿⣿⣿⠋⣠⣾⣿⣷⣦⣄⡀⠀⠀
+⠀⠈⠙⠻⢿⣿⣿⣿⣿⠀⣿⠛⠿⠿⠿⠿⠿⠿⠛⣿⠀⣿⣿⣿⣿⡿⠟⠋⠁⠀
+⠀⠀⠀⠀⠀⠙⢿⣿⣿⠀⣿⣷⡄⢠⣤⣤⡄⢠⣾⣿⠀⣿⣿⡿⠋⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠹⣿⡄⠛⠿⢿⣾⣿⣿⣷⣿⠿⠛⢠⣿⠏⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠛⠛⠓⠒⠀⠀⠀⠀⠀⠀⠒⠚⠛⠛⠀⠀⠀⠀⠀⠀⠀⠀
+        ]],
         keys = {
           { icon = ' ', key = 'f', desc = 'Find File', action = ':Telescope find_files' },
           { icon = ' ', key = 'n', desc = 'New File', action = ':ene | startinsert' },
@@ -33,6 +43,7 @@ return {
       },
     },
   },
+
   -- This is the "Secret Sauce" that keeps it aligned
   config = function(_, opts)
     local snacks = require 'snacks'
