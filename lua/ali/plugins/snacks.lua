@@ -11,6 +11,7 @@ return {
           indent = 2,
         },
         { section = 'keys', gap = 1, padding = 1 },
+        { section = 'startup' },
       },
       -- Customizing the buttons and behavior
       preset = {
@@ -43,16 +44,24 @@ return {
       },
     },
   },
-
   -- This is the "Secret Sauce" that keeps it aligned
   config = function(_, opts)
     local snacks = require 'snacks'
+
+    local dracula = require 'dracula'
+    local colors = dracula.colors()
 
     -- Add the fixed-width padding logic to the buttons dynamically
     for _, key in ipairs(opts.dashboard.preset.keys) do
       key.desc = key.desc .. string.rep(' ', 43 - #key.desc)
     end
 
+    vim.api.nvim_set_hl(0, 'SnacksDashboardKey', { fg = dracula.colors().pink, bg = 'none', bold = true })
+    vim.api.nvim_set_hl(0, 'SnacksDashboardDesc', { fg = dracula.colors().bright_white, bg = 'none', bold = true })
+
+    vim.api.nvim_set_hl(0, 'SnacksDashboardIcon', { fg = dracula.colors().bright_white, bg = 'none', bold = true })
+    vim.api.nvim_set_hl(0, 'SnacksDashboardIcon', { fg = dracula.colors().bright_white, bg = 'none', bold = true })
+    vim.api.nvim_set_hl(0, 'SnacksDashboardFooter', { fg = dracula.colors().white, bg = 'none', bold = true })
     snacks.setup(opts)
   end,
 }
